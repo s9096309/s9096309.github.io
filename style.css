@@ -1,41 +1,95 @@
+/* Allgemeines Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure full height for sticky footer layout */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: indigo; /* Ensures consistent background */
+    color: darkorange;
+    font-family: Copperplate, fantasy;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Header */
 header {
-    background-color: royalblue;
-    align-items: center;
+    background-color: indigo;
+    color: gold;
     text-align: center;
-    margin-left:auto;
-    margin-right:auto;
-    color: white;
+    padding: 10px;
+
 }
 
-body {
-    background-color:lightgray;
+/* Start menu container */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #101010;
+    padding: 10px;
+    border-bottom: 2px solid gold;
 }
 
+/* Individual start menu items */
+nav h1, nav h2, nav h3, nav h4, nav h5 {
+    margin: 0 10px;
+    color: gold;
+    text-align: center;
+    font-size: 1rem;
+    white-space: nowrap;
+    flex-direction: row;
+}
 
-
+/* Main Section */
 main {
-    box-shadow: 5px 5px 5px darkgrey;
-    align-content: center;
-    background-color: white;
-    margin:10px auto;
-    width: 90%;
-    padding:10px;
-    border-radius: 15px;
-}
-
-h2 {
-    color: white;
-    background-color: royalblue;
+    flex: 1; /* Allow main to take remaining space */
+    background-color: black;
+    border-color: gold;
+    padding: 15px;
+    width: 100%;
     text-align: center;
 }
 
-li {
-    margin-bottom: 10px; /* Adjust spacing as needed */
-}
-.buttons { align-items: center; text-align: center;}
-.buttons button {
-    align-items: center;
+/* Suchfeld und Kategorien */
+#search-section {
+    margin: 20px;
     text-align: center;
-    color: white;
-    background-color: royalblue;
+    color:white;
+}
+
+#search-section input,
+#search-section button {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    background-color: black;
+    color:white;
+}
+
+#search-section button {
+    cursor: pointer;
+}
+
+#search-section input:disabled,
+#search-section button:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: peachpuff;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 0px 0px 5px #00FF00;
 }
